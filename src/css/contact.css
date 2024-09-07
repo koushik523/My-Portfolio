@@ -1,0 +1,125 @@
+.contact-container {
+    margin: 0 auto;
+    margin-top: 80px;
+    width: 80%;
+}
+
+.contact-container h1 {
+    color: white;
+    text-align: center;
+}
+
+.contact-container h1 span {
+    color: #1dc8a6;
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.form-group input{
+    border: none;
+    width: 100%;
+    padding: 2px 5px;
+    height: 40px;
+    font-size: 18px;
+    color: white;
+    background-color: rgb(56, 59, 59);
+    border: 2px solid rgb(56, 59, 59);
+    border-radius: 5px;
+}
+
+.form-group input:hover,.contact-container textarea:hover{
+    box-shadow: 0px 0px 5px white;
+}
+
+.form-group input:focus,.contact-container textarea:focus{
+    outline: none;
+    border: 2px solid grey;
+    box-shadow: 0px 0px 5px white;
+}
+
+.contact-container textarea{
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    padding: 2px 5px;
+    height: 200px;
+    font-size: 18px;
+    background-color: rgb(56, 59, 59);
+    border: 2px solid rgb(56, 59, 59);
+    margin-bottom: 20px;
+    color: white;
+}
+
+.contact-container .contact-button{
+    display: flex;
+    margin: 5px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #1dc8a6;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid #1dc8a6;
+}
+
+.contact-button:hover {
+    background-color: rgb(18, 20, 20);
+    color: #1dc8a6;
+}
+
+.alert-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .alert-content {
+    background: rgb(18, 20, 20);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 300px;
+    border: 1px solid rgba(128, 128, 128, 0.301);
+  }
+  
+  .alert-content h3 {
+    margin-bottom: 10px;
+  }
+  
+  .alert-content button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #1dc8a6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid #1dc8a6;
+  }
+  
+  .alert-content button:hover {
+    background-color: rgb(18, 20, 20);
+    color: #1dc8a6;
+  }
+
+  @media screen and (max-width: 768px) {
+    .form-group {
+      grid-template-columns: 1fr;
+    }
+  }

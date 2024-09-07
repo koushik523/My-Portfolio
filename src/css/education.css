@@ -1,0 +1,64 @@
+.education {
+    margin-top: 100px;
+    width: 100%;
+}
+
+.education h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.education h1 span {
+    color: #1dc8a6;
+}
+
+.education-card {
+    display: flex;
+    width: 80%;
+    margin: 10px auto;
+    padding: 20px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    box-shadow: #c1fff3b2 0px 0px 10px 0px;
+}
+
+.education-card img {
+    margin-left: 50px;
+    margin-top: 30px;
+    display: flex;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border-radius: 50%;
+    border: 4px solid #1dc8a6;
+    margin-right: 10px;
+}
+
+.education-card h2 {
+    margin-bottom: 10px;
+}
+
+.edu-content {
+    color: white;
+    margin-left: 40px;
+}
+
+.edu-content h2 {
+    color: #1dc8a6;
+}
+
+@media screen and (max-width: 768px) {
+    .education-card {
+        display: block;
+    }
+
+    .education-card img {
+        margin: 0 auto;
+    }
+
+    .edu-content {
+        margin: 20px 0;
+
+    }
+}

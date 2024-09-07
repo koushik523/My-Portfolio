@@ -1,0 +1,80 @@
+.skill2-container {
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.skill2-container h1 {
+    text-align: center;
+    color: white;
+}
+
+.skill2-container h1 span {
+    color: #1dc8a6;
+}
+
+.skills-container2 {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.f-container,.b-container {
+    margin-top: 0;
+    width: 90%;
+    border: 2px solid grey;
+    padding: 10px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+}
+
+.f-end,.b-end {
+    width: 50%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.progress-containerL {
+    margin: 0 auto;
+    height: 50px;
+    width: 95%;
+}
+.progress-containerL p{
+    display: flex;
+    justify-content: space-between;
+}
+.progress-containerL p span{
+    display: flex;
+}
+
+.progress-barL {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 13px;
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.progressL {
+    padding: 0 2px;
+    width: 90%;
+    height: 10px;
+    background-color: #1dc8a6;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .skills-container2 {
+        flex-direction: column;
+    }
+
+    .f-end,.b-end {
+        width: 95%;
+    }
+    .f-container,.b-container {
+        width: 100%;
+    }
+}

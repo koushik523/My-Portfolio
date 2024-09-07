@@ -1,0 +1,135 @@
+.navbar {
+  position: fixed;
+  background-color: rgb(12, 14, 13);
+    z-index: 1000; 
+    display: flex;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #1dc8a6;
+    padding: 1rem 0;
+  }
+  
+  .navbar-brand {
+    color: #1dc8a6;
+    font-weight: 600;
+  }
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 17px;
+  padding-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.nav-links a:hover {
+  color: #1dc8a6;
+}
+
+.nav-links a.active {
+  color: #1dc8a6;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px; /* Height of the underline */
+    background-color: #1dc8a6; /* Color of the underline */
+    transition: width 0.3s ease; /* Animation duration and timing */
+}
+
+/* Underline animation on hover */
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* Underline for active link */
+.navbar a.active::after {
+  width: 100%;
+}
+
+.burger {
+  display: none;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 985px) {
+  .navbar {
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 40%;
+      height: 100vh;
+      position: absolute;
+      top: 35px;
+      left: 0;
+      border-right: 1px solid grey;
+      background-color:  rgb(12, 14, 13);
+  }
+
+  .nav-links li {
+      margin: 0;
+      padding: 20px 10px;
+      text-align: left;
+  }
+
+  .burger {
+      display: block;
+      cursor: pointer;
+  }
+
+  .burger div {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      margin: 5px;
+      transition: all 0.3s ease;
+  }
+
+  .nav-active {
+      display: flex;
+  }
+
+  /* Burger menu animation */
+  .toggle .line1 {
+      transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .toggle .line2 {
+      opacity: 0;
+  }
+
+  .toggle .line3 {
+      transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .navbar-brand {
+    margin-right: 20px;
+    padding-right: 10px;
+  }
+}

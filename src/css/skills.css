@@ -1,0 +1,38 @@
+.skills-container {
+    width: 100%;
+    margin-top: 70px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.toggle-view {
+    margin-right: 20px;
+    height: 20px;
+    width: 20px;
+    border-radius: 3px;
+    border: 1px solid rgb(18, 20, 20);
+    box-shadow: 0px 0px 2px #888888;
+}
+
+.toggle-view:hover {
+    cursor: pointer;
+    border-color:grey;
+}
+
+.toggle-view .line {
+    height: 2px;
+    width: 16px;
+    background-color: white;
+    margin: 3.5px 2px;
+    transition: 0.3ms ease-in-out;
+}
+
+.table {
+    margin: 0 auto;
+}
+
+.toggle-view .box {
+    height: 5px;
+    width: 5px;
+    background-color: white;
+}

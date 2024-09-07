@@ -1,0 +1,145 @@
+.container {
+    width: 70%;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    font-size: 18px;
+}
+
+.mobileimg{
+    display: none;
+}
+
+.child-container{
+    width: 60%;
+    height: 100%;
+    color: white;
+}
+.icons{
+    margin: 30px 0px 20px 0px;
+}
+
+.icons li {
+    list-style-type: none;
+    display: inline;
+}
+
+.icons li a {
+    text-decoration: none;
+    color : #1dc8a6;
+    margin-right: 20px;
+    font-size: 30px;
+    border: 3px solid #1dc8a6;
+    border-radius: 50%;
+    padding: 8px 7px 1px 7px;
+}
+
+.icons li a:hover {
+    color:  rgb(18, 20, 20);
+    background-color: #1dc8a6;
+}
+
+
+.child-container h2 {
+    color: #1dc8a6;
+    border-right: 2px solid #1dc8a6;
+    display: inline;
+    font-size: 25px;
+    margin-top: 50px;
+    padding-right: 10px;
+}
+
+.child-container p {
+    text-align: left;
+    padding-right: 20px;
+    font-size: 20px;
+}
+
+.mobileimg, .desk-top-img {
+    margin-top: 50px;
+    border: 5px solid #1dc8a6;
+    padding: 10px;
+    border-radius: 50%;
+    margin-left: 50px;
+    width: 300px;
+    height: 300px;
+}
+
+.downloadcv {
+    width: 160px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 20px;
+    border: 3px solid #1dc8a6;
+    border-radius: 10px;
+    color:  rgb(18, 20, 20);
+    background-color: #1dc8a6;
+}
+
+.downloadcv:hover {
+    background-color: rgb(18, 20, 20);
+    color: #1dc8a6;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 985px) {
+    .desk-top-img {
+        display: none;
+    }
+    .container {
+        margin-top: 100px;
+        width: 100%;
+        font-size: 15px;
+        display: block;
+
+    }
+    .child-container{
+        width: 90%;
+        margin-left: 20px;
+    }
+    .mobileimg {
+        display: block;
+        width: 200px;
+        height: 200px;
+        margin: auto;
+    }
+    .icons li a {
+        font-size: 15px;
+        border: 2px solid #1dc8a6;
+        padding: 8px 6px 1px 6px;
+    }
+    .child-container h2 {
+        width: 200px;
+        padding-right: 5px;
+        font-size: 20px;
+    }
+    .child-container p {
+        font-size: 16px;
+    }
+
+}
+
+.typing-animation {
+    display: flex;
+    align-items: center;
+}
+
+/* Typing animation */
+@keyframes typing {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+.typed-text {
+    margin: 20px 0;
+    font-weight: 600;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid transparent; /* Invisible border to maintain height */
+    font-size: 2.2rem;
+    animation: typing 5s steps(30, end) infinite;
+}
+
