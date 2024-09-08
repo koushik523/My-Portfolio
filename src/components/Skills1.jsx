@@ -12,8 +12,8 @@ const Skills1 = () => {
 
   const skills = {
     frontEnd: [
-      { percentage: 90, image: "html-logo.png", name: "HTML", alt: "html-logo" },
-      { percentage: 80, image: "css-logo.svg", name: "CSS", alt: "css-logo" },
+      { percentage: 90, image: "/html-logo.png", name: "HTML", alt: "html-logo" },
+      { percentage: 80, image: "/css-logo.svg", name: "CSS", alt: "css-logo" },
       { percentage: 50, image: "javaScript-logo.svg", name: "JavaScript", alt: "javaScript-logo" },
       { percentage: 50, image: "react.svg", name: "React JS", alt: "react-logo" },
       { percentage: 50, image: "bootstrap-logo.svg", name: "Bootstrap", alt: "bootstrap-logo" }
