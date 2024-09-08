@@ -12,18 +12,18 @@ const Skills1 = () => {
 
   const skills = {
     frontEnd: [
-      { percentage: 90, image: "src/assets/html-logo.svg", name: "HTML", alt: "html-logo" },
-      { percentage: 80, image: "src/assets/css-logo.svg", name: "CSS", alt: "css-logo" },
-      { percentage: 50, image: "src/assets/javaScript-logo.svg", name: "JavaScript", alt: "javaScript-logo" },
-      { percentage: 50, image: "src/assets/react.svg", name: "React JS", alt: "react-logo" },
-      { percentage: 50, image: "src/assets/bootstrap-logo.svg", name: "Bootstrap", alt: "bootstrap-logo" }
+      { percentage: 90, image: "html-logo.svg", name: "HTML", alt: "html-logo" },
+      { percentage: 80, image: "css-logo.svg", name: "CSS", alt: "css-logo" },
+      { percentage: 50, image: "javaScript-logo.svg", name: "JavaScript", alt: "javaScript-logo" },
+      { percentage: 50, image: "react.svg", name: "React JS", alt: "react-logo" },
+      { percentage: 50, image: "bootstrap-logo.svg", name: "Bootstrap", alt: "bootstrap-logo" }
     ],
     backEnd: [
-      { percentage: 0, image: "src/assets/nodejs-logo.svg", name: "Node JS", alt: "nodejs-logo" },
-      { percentage: 0, image: "src/assets/expressjs-logo.svg", name: "Express JS", alt: "expressjs-logo" },
-      { percentage: 30, image: "src/assets/python-logo.svg", name: "Python", alt: "python-logo" },
-      { percentage: 0, image: "src/assets/mongodb-logo.svg", name: "MongoDB", alt: "mongodb-logo" },
-      { percentage: 60, image: "src/assets/mysql-logo.svg", name: "MySQL", alt: "mysql-logo" }
+      { percentage: 0, image: "nodejs-logo.svg", name: "Node JS", alt: "nodejs-logo" },
+      { percentage: 0, image: "expressjs-logo.svg", name: "Express JS", alt: "expressjs-logo" },
+      { percentage: 30, image: "python-logo.svg", name: "Python", alt: "python-logo" },
+      { percentage: 0, image: "mongodb-logo.svg", name: "MongoDB", alt: "mongodb-logo" },
+      { percentage: 60, image: "mysql-logo.svg", name: "MySQL", alt: "mysql-logo" }
     ]
   };
 
