@@ -60,7 +60,7 @@ const Contact = () => {
             value={formData.fullName}
             onChange={handleChange}
             placeholder='Full Name'
-            autocomplete="name"
+            autoComplete="name"
             required
           />
           <input
@@ -69,7 +69,7 @@ const Contact = () => {
             value={formData.email}
             onChange={handleChange}
             placeholder='Email Address'
-            autocomplete="email"
+            autoComplete="email"
             required
           />
           <input
@@ -78,7 +78,7 @@ const Contact = () => {
             value={formData.phoneNumber}
             onChange={handleChange}
             placeholder='Mobile Number'
-            autocomplete="tel"
+            autoComplete="tel"
             required
           />
           <input
@@ -87,7 +87,7 @@ const Contact = () => {
             value={formData.subject}
             onChange={handleChange}
             placeholder='Email Subject'
-            autocomplete="off"
+            autoComplete="off"
             required
           />
         </div>
@@ -96,7 +96,7 @@ const Contact = () => {
             value={formData.message}
             onChange={handleChange}
             placeholder='Your Message'
-            autocomplete="off"
+            autoComplete="off"
             required
           />
 
