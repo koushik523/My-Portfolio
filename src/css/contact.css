@@ -63,7 +63,7 @@
     font-size: 16px;
     font-weight: 600;
     background-color: #1dc8a6;
-    color: white;
+    color: rgb(18, 20, 20);
     border-radius: 5px;
     cursor: pointer;
     border: 2px solid #1dc8a6;
@@ -106,7 +106,7 @@
     font-size: 16px;
     font-weight: 600;
     background-color: #1dc8a6;
-    color: white;
+    color: rgb(18, 20, 20);
     border: none;
     border-radius: 5px;
     cursor: pointer;
