@@ -21,7 +21,6 @@ const Home = () => {
         <title>Kousigaraj | Emerging Full Stack Developer</title>
         <meta name="description" content="Kousigaraj's Portfolio - Emerging Full Stack Developer showcasing projects, skills, and experience in Full Stack Development." />
       </Helmet>
-      <img className='mobileimg' src="profile_picture.jpg" alt="profile-picture" />
       <div className='child-container'>
         <div className="typing-animation">
           <span className="typed-text">Hi, I'm Kousigaraj</span>
@@ -36,12 +35,14 @@ const Home = () => {
         <ul className='icons'>
           <li><a href='https://wa.me/919790665826' target="_blank" rel="noopener noreferrer"><MdPhone /></a></li>
           <li><a href='mailto:kousigaraj77@gmail.com' target="_blank" rel="noopener noreferrer"><GoMail /></a></li>
-          <li><a href='https://www.linkedin.com/in/kousigaraj-p-566a80283/' target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a></li>
+          <li><a href='https://www.linkedin.com/in/kousigaraj/' target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a></li>
           <li><a href='https://github.com/Kousigaraj' target="_blank" rel="noopener noreferrer"><FaGithub /></a></li>
         </ul>
         <button className='downloadcv' onClick={handleDownload}>Download Resume</button>
       </div>
-      <img className='desk-top-img' src="profile_picture.jpg" alt="profile-picture" />
+      <div className='img-container'>
+        <img className='desk-top-img' src="profile_picture.jpg" alt="profile-picture" />
+      </div>
     </div> 
   )
 }

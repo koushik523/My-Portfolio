@@ -34,7 +34,7 @@ const Skills2 = () => {
         <div className='skills-container2'>
             <div className='f-end'>
                 <h3>Front-End</h3>
-                <div className='f-container'>
+                <div className='f-container1'>
                     {skills.frontEnd.map((skill, index) => (
                         <ProgressBarL key={index} name={skill.name} percentage={skill.percentage}/>
                     ))}
@@ -42,7 +42,7 @@ const Skills2 = () => {
             </div>
             <div className='b-end'>
                 <h3>Back-End</h3>
-                <div className='b-container'>
+                <div className='b-container1'>
                     {skills.backEnd.map((skill, index) => (
                         <ProgressBarL key={index} name={skill.name} percentage={skill.percentage}/>
                     ))}

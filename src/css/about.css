@@ -1,26 +1,36 @@
-.about {
-    margin-top: 100px;
-    height: 100%;
+.about { 
+    height: 100vh;
     width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 
 .about-text {
-    width: 80%;
-    margin: 0 auto;
+    width: 90%;
     text-align: center;
-    padding: 10px 20px;
     color: white;
     font-size: 1rem;
-    display: inline;
-    margin-top: 50px;
-    transition: margin-top 0.3s ease-in-out;
 }
+
+.about-text p {
+    transition: all 0.4s ease-in-out;
+    text-align: center;
+    font-size: 18px;
+  }
   
-  .about-text.expanded {
-    margin-top: 0;
+  .about-text .read-more-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .about-text .read-more-content.show {
+    max-height: 1000px; /* Large enough for full content */
+    opacity: 1;
   }
 
 .about-text h1 {
@@ -29,11 +39,6 @@
 
 .about-text h1 span {
     color: #1dc8a6;
-}
-
-.about-text p {
-    text-align: center;
-    font-size: 18px;
 }
 
 .read-more-btn {
@@ -55,12 +60,8 @@
 }
 
 @media screen and (max-width: 985px) {
-    .about {
-        margin-top: 50px;
-    }
-
     .about-text{
-        width: 100%;
+        width: 90%;
     }
 
     .about-text p{

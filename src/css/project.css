@@ -1,5 +1,65 @@
 .project-container {
     margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
     color: white;
+    width: 90%;
 }
+
+.project-container h1 span {
+    color: #1dc8a6;
+}
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .project-card {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,255,255,0.3);
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .project-info {
+    padding: 1rem;
+  }
+  
+  .project-info h3 {
+    margin-bottom: 0.5rem;
+    color: #00e6e6;
+  }
+  
+  .project-info p {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .tech-stack {
+    font-size: 0.85rem;
+    color: #81d4fa;
+  }
+
+@media screen and (max-width: 768px) {
+    .project-container{
+        width: 80%;
+    }
+    
+}
+  

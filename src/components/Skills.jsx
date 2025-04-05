@@ -38,14 +38,14 @@ const Skills = () => {
         )
       }
   return (
-    <>
+    <div className='skill-page'>
     <div className='skills-container'>
         <div onClick={toggleView} className='toggle-view'>
             {isListView?  <CardIcon/>: <ListIcon/>}
         </div>
     </div>
     {isListView?  <Skills2/> : <Skills1/>}
-    </>
+    </div>
   )
 }
 

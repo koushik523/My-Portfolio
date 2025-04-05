@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../css/skills1.css';
 import SkillCard from './SkillCard';
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
@@ -6,9 +6,25 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 const Skills1 = () => {
   const [currentFrontEndPage, setCurrentFrontEndPage] = useState(0);
   const [currentBackEndPage, setCurrentBackEndPage] = useState(0);
-  const itemsPerPageDesktop = 4;
-  const itemsPerPageTablet = 3;
-  const itemsPerPageMobile = 2;
+  const [itemsPerPage, setItemsPerPage] = useState(getItemsPerPage());
+
+  function getItemsPerPage() {
+    const width = window.innerWidth;
+    if (width <= 768) return 2;        // mobile
+    if (width <= 1024) return 3;       // tablet
+    if (width <= 1440) return 4;       // laptop
+    return 5;                          // desktop
+  }
+
+  useEffect(() => {
+    const handleResize = () => {
+      setItemsPerPage(getItemsPerPage());
+      setCurrentFrontEndPage(0); // Reset to first page on resize
+      setCurrentBackEndPage(0);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const skills = {
     frontEnd: [
@@ -26,8 +42,6 @@ const Skills1 = () => {
       { percentage: 60, image: "/assets/mysql-logo.svg", name: "MySQL", alt: "mysql-logo" }
     ]
   };
-
-  const itemsPerPage = window.innerWidth <= 768 ? itemsPerPageMobile: window.innerWidth <= 1024 ? itemsPerPageTablet : itemsPerPageDesktop;
 
   const handleFrontEndNext = () => {
     if ((currentFrontEndPage + 1) * itemsPerPage < skills.frontEnd.length) {
@@ -76,10 +90,11 @@ const Skills1 = () => {
       </div>
       <div className="pagination-buttons" style={{ justifyContent: currentFrontEndPage > 0 ? 'space-between' : 'flex-end' }}>
         {currentFrontEndPage > 0 && <button onClick={handleFrontEndPrev}><FaArrowLeft /><span>Previous</span></button>}
-        {getCurrentItems(skills.frontEnd, currentFrontEndPage).length > 0 && (
-          <button onClick={handleFrontEndNext} style={{ display: !isLastPageFrontEnd ? 'inline-block' : 'none' }}><span>Next</span><FaArrowRight /></button>
+        {!isLastPageFrontEnd && (
+          <button onClick={handleFrontEndNext}><span>Next</span><FaArrowRight /></button>
         )}
       </div>
+
       <h2>Back-End</h2>
       <div className='back-end'>
         {getCurrentItems(skills.backEnd, currentBackEndPage).map((skill, index) => (
@@ -91,8 +106,8 @@ const Skills1 = () => {
       </div>
       <div className="pagination-buttons" style={{ justifyContent: currentBackEndPage > 0 ? 'space-between' : 'flex-end' }}>
         {currentBackEndPage > 0 && <button onClick={handleBackEndPrev}><FaArrowLeft /><span>Previous</span></button>}
-        {getCurrentItems(skills.backEnd, currentBackEndPage).length > 0 && (
-          <button  onClick={handleBackEndNext} style={{ display: !isLastPageBackEnd ? 'inline-block' : 'none' }}><span>Next</span><FaArrowRight /></button>
+        {!isLastPageBackEnd && (
+          <button onClick={handleBackEndNext}><span>Next</span><FaArrowRight /></button>
         )}
       </div>
     </div>

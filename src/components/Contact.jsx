@@ -51,6 +51,7 @@ const Contact = () => {
   };
   return (
     <div className='contact-container'>
+      <div className='contact-form'>
       <h1>Contact <span>Me!</span></h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
@@ -90,7 +91,6 @@ const Contact = () => {
             autoComplete="off"
             required
           />
-        </div>
           <textarea
             name="message"
             value={formData.message}
@@ -99,10 +99,10 @@ const Contact = () => {
             autoComplete="off"
             required
           />
-
+        </div>
         <button className='contact-button' type="submit" >Submit</button>
       </form>
-
+      </div>
       {/* Custom Alert Box */}
       {showAlert && (
         <div className="alert-box">
