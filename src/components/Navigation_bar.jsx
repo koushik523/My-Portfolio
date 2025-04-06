@@ -1,17 +1,22 @@
 import React, { useState } from 'react';
 import '../css/Navigation_bar.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const Navigation_bar = () => {
   const [navActive, setNavActive] = useState(false);
+  const navigate = useNavigate();
 
   const handleBurgerClick = () => {
     setNavActive(!navActive);
   };
 
   const handleLinkClick = () => {
-    // Close the sidebar when a menu item is clicked
     setNavActive(false);
+  };
+
+  const handleBrandClick = () => {
+    navigate('/');
+    setNavActive(false); // Optional: close nav if mobile
   };
 
   return (
@@ -21,8 +26,8 @@ const Navigation_bar = () => {
         <div className="line2"></div>
         <div className="line3"></div>
       </div>
-      <div className="navbar-brand">
-        <NavLink to="/">Portfolio</NavLink>
+      <div className="navbar-brand" onClick={handleBrandClick} style={{ cursor: 'pointer' }}>
+        Portfolio
       </div>
       <ul className={`nav-links ${navActive ? 'nav-active' : ''}`}>
         <li><NavLink exact="true" to="/" activeclassname="active" onClick={handleLinkClick}>Home</NavLink></li>
