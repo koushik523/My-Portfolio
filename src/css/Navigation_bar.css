@@ -13,10 +13,16 @@
   }
   
   .navbar-brand {
-    color: #1dc8a6;
     font-weight: 600;
     margin-left: 25px;
   }
+
+  .navbar-brand a {
+    text-decoration: none;
+    color: #1dc8a6;
+  }
+
+
   nav {
     display: flex;
     justify-content: flex-end;
