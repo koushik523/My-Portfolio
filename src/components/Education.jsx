@@ -34,7 +34,7 @@ const Education = () => {
           <img src="school.png" alt="School-logo" />
           <div className="edu-content">
             <h2>2018 - 2020</h2>
-            <h3>Government Higher Secondary School</h3>
+            <h3>Government Model Higher Secondary School</h3>
             <p>HSC - State Board</p>
             <p className="cgpa">Percentage: 63%</p>
           </div>
