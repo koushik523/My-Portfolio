@@ -22,7 +22,7 @@ const Navigation_bar = () => {
         <div className="line3"></div>
       </div>
       <div className="navbar-brand">
-        Portfolio
+        <NavLink to="/">Portfolio</NavLink>
       </div>
       <ul className={`nav-links ${navActive ? 'nav-active' : ''}`}>
         <li><NavLink exact="true" to="/" activeclassname="active" onClick={handleLinkClick}>Home</NavLink></li>
