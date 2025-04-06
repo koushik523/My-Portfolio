@@ -14,14 +14,9 @@
   
   .navbar-brand {
     font-weight: 600;
+    color: #1dc8a6;
     margin-left: 25px;
   }
-
-  .navbar-brand a {
-    text-decoration: none;
-    color: #1dc8a6;
-  }
-
 
   nav {
     display: flex;
